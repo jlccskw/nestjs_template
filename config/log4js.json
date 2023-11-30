@@ -1,0 +1,72 @@
+{
+  "appenders": {
+    "log": {
+      "type": "file",
+      "filename": "./logs/log.log",
+      "maxLogSize": 10485760,
+      "encoding": "utf-8",
+      "backups": 100,
+      "compress": true,
+      "keepFileExt": true,
+      "layout": {
+        "type": "messagePassThrough"
+      }
+    },
+    "err": {
+      "type": "file",
+      "filename": "./logs/err.log",
+      "maxLogSize": 10485760,
+      "encoding": "utf-8",
+      "backups": 100,
+      "compress": true,
+      "keepFileExt": true,
+      "layout": {
+        "type": "messagePassThrough"
+      }
+    },
+    "msg": {
+      "type": "file",
+      "filename": "./logs/msg.log",
+      "maxLogSize": 10485760,
+      "encoding": "utf-8",
+      "backups": 100,
+      "compress": true,
+      "keepFileExt": true,
+      "layout": {
+        "type": "messagePassThrough"
+      }
+    },
+    "console": {
+      "type": "stdout",
+      "layout": {
+        "type": "messagePassThrough"
+      }
+    }
+  },
+  "categories": {
+    "default": {
+      "appenders": [
+        "log"
+      ],
+      "level": "ALL"
+    },
+    "error": {
+      "appenders": [
+        "err"
+      ],
+      "level": "ALL"
+    },
+    "console": {
+      "appenders": [
+        "console"
+      ],
+      "level": "ALL"
+    },
+    "msg": {
+      "appenders": [
+        "msg"
+      ],
+      "level": "ALL"
+    }
+  }
+}
