@@ -1,0 +1,34 @@
+server:
+  host: 'localhost'
+  port: 3000
+  readTimeout: 60
+  writeTimeout: 60
+
+db:
+  mysql:
+    type: 'mysql'
+    host: 'www.jlcnki.top'
+    port: 13306
+    username: 'root'
+    password: 'cnkijlfgs'
+    database: 'plan_a'
+    autoLoadEntities: true
+    synchronize: true
+#  sqlite:
+#    database: 'sqlite.db'
+
+app:
+  pageSize: 20
+  jwtSecret: ZAcY6NbRoNhahFpQzZO0clicelUcLU3afOUL99WWvpsQyTD0j7UMPr6op2u6sqv
+  jwtExpiresIn: '1 day'
+  runtimeRootPath: runtime/
+  imageSavePath: upload/images/
+  # MB
+  imageMaxSize: 5
+  imageAllowExts: .jpg,.jpeg,.png
+
+  exportSavePath: export/
+
+  logSavePath: logs/
+  logSaveName: log
+  logFileExt: log

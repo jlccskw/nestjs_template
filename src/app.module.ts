@@ -1,22 +1,15 @@
-import { Module } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm';
-import { UsersModule } from './users/users.module';
-import { LoggerModule } from './logger/logger.module';
+import {Module} from '@nestjs/common';
+import {UsersModule} from './modules/users/users.module';
+import {ConfigModule} from '@nestjs/config';
+import configuration from './config/configuration';
+import DatabaseInitModule from "./modules/init";
+
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: 'www.jlcnki.top',
-      port: 13306,
-      username: 'root',
-      password: 'cnkijlfgs',
-      database: 'plan_a',
-      autoLoadEntities: true,
-      synchronize: true,
-    }),
+    ConfigModule.forRoot({load: [configuration], isGlobal: true, cache: true,}),
+    DatabaseInitModule.forRoot(),
     UsersModule,
-    LoggerModule,
   ],
 })
 export class AppModule {}
