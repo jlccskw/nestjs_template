@@ -3,7 +3,7 @@ import {CreateDateColumn, UpdateDateColumn, DeleteDateColumn} from "typeorm";
 
 @Entity()
 export class User {
-    @PrimaryGeneratedColumn() // 自增主键
+    @PrimaryGeneratedColumn() // auto-increment primary key
     id: number;
 
     @CreateDateColumn({name: 'created_at', type: "datetime"})
