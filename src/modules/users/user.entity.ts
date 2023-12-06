@@ -16,13 +16,10 @@ export class User {
     deleteAt: Date;
 
     @Column()
-    firstName: string;
+    username: string;
 
     @Column()
-    lastName: string;
-
-    @Column()
-    age: string;
+    password: string;
 
     @Column({default: true})
     isActive: boolean;
