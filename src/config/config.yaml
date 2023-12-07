@@ -21,6 +21,7 @@ app:
   pageSize: 20
   jwtSecret: ZAcY6NbRoNhahFpQzZO0clicelUcLU3afOUL99WWvpsQyTD0j7UMPr6op2u6sqv
   jwtExpiresIn: '1 day'
+#  jwtExpiresIn: '60S'
   runtimeRootPath: runtime/
   imageSavePath: upload/images/
   # MB
