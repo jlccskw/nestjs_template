@@ -5,8 +5,8 @@ import configuration from './config/configuration';
 import DatabaseInitModule from "./modules/init";
 import {ResponseIntercepter} from "./common/response.interceptor";
 import {APP_INTERCEPTOR} from "@nestjs/core";
-// import {AuthController} from "./app.controller";
 import {AuthModule} from "./modules/auth/auth.module";
+
 
 @Module({
     imports: [
@@ -15,7 +15,6 @@ import {AuthModule} from "./modules/auth/auth.module";
         UsersModule,
         AuthModule,
     ],
-    // controllers: [AuthController],
     providers: [
         {
             provide: APP_INTERCEPTOR,
