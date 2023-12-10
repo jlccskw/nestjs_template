@@ -21,10 +21,11 @@ in the auth.module.ts file,we set the JwtAuthGuard as the global guard.so all th
 if we want to exclude token validation for a specific router,we can use the 'Public' decorator to set the router without the guard.
 
 
-
+#### add CORS
+in the main.ts file,we use the 'app.enableCors()' to enable the CORS.
 
 
 
 
 ### TODO
-auto captcha
+auth captcha
